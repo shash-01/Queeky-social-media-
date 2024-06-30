@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAV BAR -->
+
+    <div class="sec1nb">
+        <div class="company">
+            Queeky
+        </div>
+        <ol class="nav">
+            <li><a href="#"><i class="fa-solid fa-house" id="nav_logo"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-user-group" id="nav_logo"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-film" id="nav_logo"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-bell" id="nav_logo"></i></a></li>
+            <li><a href="#"> <i class="fa-solid fa-user" id="nav_logo"></i></a></li>
+        </ol>
+    </div>
+
+    <!-- head feed -->
+
+    <div class="sec2fd">
+        <div id="usrprfl"></div>
+        <input type="text" id="wrsm" placeholder="Share your day..">
+        <a href="#"></a>
+        <a href="#"></a>
+
+
+    </div>
+    <!-- Left Section -->
+    <div class="left">
+        <ol>
+            <li><a href="#">Shashank Bhardwaj</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Saved</a></li>
+            <li><a href="#">Groups</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Feeds</a></li>
+            <li><a href="#">Events</a></li>
+        </ol>
+    </div>
+
+
+    <!-- Right Section -->
+
+    <div class="right">
+        <div id="cht_hd">Chats</div>
+        <div id="online">Online <span style="font-size: 10px;">🟢</span></div>
+    </div>
+
+    <!-- Third Section (posts/Content)-->
+
+    <div class="posts">
+        <div class="pstlogo">
+            <i class="fa-solid fa-user" id="fa-user1"></i>
+        </div>
+         <!-- name -->
+        <div class="name">
+            Shashank Bhardwaj
+        </div>
+        <div class="cptn">
+
+        </div>
+
+         <!-- pic -->
+
+        <div class="pic">
+            <img src="IMG_20210516_100839_526.jpg" alt="" id="post">
+        </div>
+        <!-- action buttons-->
+        <div class="actions">
+            <i class="fa-regular fa-heart" id="actions_id"></i>
+            <i class="fa-regular fa-comment" id="actions_id"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket" id="actions_id"></i>
+        </div>
+    </div>
+    <div class="posts">
+        <div class="pstlogo">
+            <i class="fa-solid fa-user" id="fa-user1"></i>
+        </div>
+        <!-- name -->
+        <div class="name">
+            Shashank Bhardwaj
+        </div>
+        <!-- caption -->
+        <div class="cptn">
+
+        </div>
+
+        <!-- pic -->
+
+        <div class="pic">
+            <img src="IMG_20210927_215828_690.jpg" alt="" id="post">
+        </div>
+        <!-- action buttons-->
+        <div class="actions">
+            <i class="fa-regular fa-heart" id="actions_id"></i>
+            <i class="fa-regular fa-comment" id="actions_id"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket" id="actions_id"></i>
+        </div>
+    </div>
+    <div class="posts">
+        <div class="pstlogo">
+            <i class="fa-solid fa-user" id="fa-user1"></i>
+        </div>
+         <!-- name -->
+        <div class="name">
+            Shashank Bhardwaj
+        </div>
+        
+        <!-- caption -->
+        <div class="cptn">
+
+        </div>
+
+         <!-- pic -->
+
+        <div class="pic">
+            <img src="IMG_20221015_181625_393.jpg" alt="" id="post">
+        </div>
+
+        <!-- action buttons-->
+
+        <div class="actions">
+            <i class="fa-regular fa-heart" id="actions_id"></i>
+            <i class="fa-regular fa-comment" id="actions_id"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket" id="actions_id"></i>
+        </div>
+    </div>
+    <!--script-->
+    <script>
+        // Handle click event on the icon to trigger file input click
+        document.querySelector('.file-upload').addEventListener('click', function () {
+            document.getElementById('fileInput').click();
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function (event) {
+            const fileList = event.target.files;
+            const fileDisplayArea = document.getElementById('fileList');
+            const cameraButton = document.querySelector('.fa-camera');
+            const fileButton = document.querySelector('.file-upload');
+
+            fileDisplayArea.innerHTML = ''; // Clear the display area
+
+            if (fileList.length > 0) {
+                // Hide camera and file buttons
+                cameraButton.style.display = 'none';
+                fileButton.style.display = 'none';
+            }
+
+            for (let i = 0; i < fileList.length; i++) {
+                const file = fileList[i];
+                const fileDiv = document.createElement('div');
+                fileDiv.innerHTML = `<strong>${file.name}</strong> (${file.type}) - ${file.size} bytes`;
+
+                if (file.type.startsWith('image/')) {
+                    const img = document.createElement('img');
+                    img.src = URL.createObjectURL(file);
+                    img.style.maxWidth = '200px';
+                    img.style.display = 'block';
+                    img.style.transition = 'transform 0.25s ease';
+                    img.onload = function () {
+                        URL.revokeObjectURL(img.src); // Release memory when done
+                    };
+                    fileDiv.appendChild(img);
+
+                    // Add zoom in button
+                    const zoomInButton = document.createElement('span');
+                    zoomInButton.innerHTML = '🔍➕';
+                    zoomInButton.classList.add('zoom-button');
+                    zoomInButton.addEventListener('click', function () {
+                        const currentScale = getCurrentScale(img);
+                        img.style.transform = `scale(${currentScale + 0.1})`;
+                    });
+                    fileDiv.appendChild(zoomInButton);
+
+                    // Add zoom out button
+                    const zoomOutButton = document.createElement('span');
+                    zoomOutButton.innerHTML = '🔍➖';
+                    zoomOutButton.classList.add('zoom-button');
+                    zoomOutButton.addEventListener('click', function () {
+                        const currentScale = getCurrentScale(img);
+                        if (currentScale > 0.1) { // Prevent zooming out too much
+                            img.style.transform = `scale(${currentScale - 0.1})`;
+                        }
+                    });
+                    fileDiv.appendChild(zoomOutButton);
+
+                    // Add cancel button
+                    const cancelButton = document.createElement('span');
+                    cancelButton.innerHTML = '✖';
+                    cancelButton.classList.add('cancel-button');
+                    cancelButton.addEventListener('click', function () {
+                        fileDisplayArea.removeChild(fileDiv);
+                        // Show camera and file buttons if no more files are displayed
+                        if (fileDisplayArea.children.length === 0) {
+                            cameraButton.style.display = 'inline-block';
+                            fileButton.style.display = 'inline-block';
+                        }
+                    });
+                    fileDiv.appendChild(cancelButton);
+                }
+
+                fileDisplayArea.appendChild(fileDiv);
+            }
+        });
+
+        // Helper function to get the current scale of an image
+        function getCurrentScale(img) {
+            const style = window.getComputedStyle(img);
+            const matrix = new WebKitCSSMatrix(style.transform);
+            return matrix.a; // a is the scaleX value
+        }
+    </script>
+</body>
+
+</html>

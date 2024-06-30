@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Inter&family=Poppins:wght@700;700&family=Roboto:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playwrite+CO:wght@100..400&display=swap');
+* {
+    font-family: 'poppins';
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: /*rgb(34, 34, 34)*/#f0f2f5;
+}
+.company
+{
+    font-family:"Playwrite CO","Great Vibes" ;
+    color:white;
+    position: absolute;
+    left:10px;
+    font-size: 26px;
+    font-weight: 600;
+}
+.nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    list-style: none;
+    text-align: center;
+}
+.nav a{
+    color: rgb(255, 255, 255);
+}
+ol li a {
+    text-decoration: none;
+    padding-right: 30px;
+    
+    font-weight: 500;
+}
+
+a:hover {
+    cursor: pointer;
+    color: rgba(22, 22, 22, 0.8)
+}
+
+.sec1nb {
+    background-color: /*rgb(14, 43, 69);*/ /*rgb(32, 32, 32)*/rgb(11, 96, 166);
+    box-shadow: 0px 2px 4px -2px rgb(0, 0, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+z-index: 1000;
+}
+.sec2fd
+{
+    box-shadow:0px 2px 4px -2px rgb(47, 47, 47) ;
+    height:70px;
+    border-bottom-right-radius:00px ;
+    border-bottom-left-radius: 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top:60px;
+    background-color: rgb(19, 94, 156);
+    z-index: 3;
+}
+#usrprfl
+{
+    height:60px;
+    width:60px;
+    border-radius: 50%;
+    image-rendering: optimizeQuality;
+    image-orientation: from-image;
+    image-resolution: 2080px;
+    object-fit:cover;
+    position: relative;
+    left:5px;
+    top:0px;
+    background-color: rgb(37, 168, 255);
+}
+#wrsm
+{
+    position: relative;
+    left:30px;
+    padding-left:5px;
+    height:40px;
+    width:400px;
+    border-radius: 10px;
+    border:1px solid black;
+    top:0px;
+    outline:none;
+}
+.fa-duotone fa-camera-retro
+{
+position: relative;
+left:560px;
+}
+.left
+{
+    background-color: white;
+    color:black;
+    position: fixed;
+    left:0px;
+    top:120px;
+    display: inline;
+    height:100vh;
+    width:17%;
+    display:flex;
+    flex-wrap: wrap;
+   
+}
+.left a 
+{
+    color: rgb(0, 0, 0);
+}
+.right
+{
+    background-color: white;
+    position: fixed;
+    right:0px;
+    top:131px;
+    display: inline;
+    height:50vw;
+    width:198px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+.left ol
+{
+    color:white;
+    font-size: 20px;
+    position:relative;
+    left:20px;
+    top:20px;
+    
+    list-style: none;
+}
+.left ol li 
+{
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+.fa-camera-retro 
+{
+    color:rgb(255, 255, 7);
+    size:30px;
+}
+li a .fa-square-envelope
+{
+    color:white;
+}
+#online
+{
+    margin-top:5px;
+    position:absolute;
+    left:20px;
+}
+#cht_hd
+{
+    border-bottom: 1px solid white;
+    /*text-decoration-line: underline;*/
+    right:10px;
+}
+.posts
+{
+    background-color: rgb(255, 255, 255);
+    position:relative;
+    top:100px;
+    height:550px;
+    width:650px;
+    display:flex;
+    justify-content: center;
+    margin-bottom:8px;
+    left:30%;
+    border-radius: 15px;
+    
+}
+.pstlogo
+{
+    background-color: rgb(255, 238, 0);
+    border-radius: 50%;
+    height:50px;
+    width:50px;
+    position:absolute;
+    top:5px;
+    left:10px
+}
+.name
+{
+    position:absolute;
+    top:20px;
+    left:70px;
+    font-weight: 500;
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    outline:none;
+    
+}
+.posts .pic
+{
+    background-color: /*rgb(108, 171, 207)*/rgb(255, 255, 255);
+    height:400px;
+    width:600px;
+    margin-top:80px;
+    border-radius:5px;
+}
+#post
+{
+    height:100%;
+    width:100%;
+    object-fit: contain;
+
+}
+#fa-user1
+{
+    position:relative;
+    left:12px;
+    top:10px;
+    font-size: 30px;
+}
+#nav_logo
+{
+    font-size: 23px;
+    color:white;
+    cursor:pointer;
+}
+
+.sticky
+{
+    position: fixed;
+    top:0px;
+    left:0;
+}
+@media all and (max-width:480px) {
+    .posts
+    {
+        width:95vw;
+        margin:auto;
+        left:0px;
+        margin-bottom:10px;
+        overflow: hidden;
+    }
+    .left
+    {
+        display:none;
+
+    }
+    .right
+    {
+        display:none;
+    }
+    #wrsm
+    {
+        width:70vw;
+        outline:none;
+        border:0 ;
+    }
+    .company
+    {
+        font-size: 24px;
+        padding-right:5px;
+        border-right:2.5px solid rgb(111, 167, 222);
+        font-family:"Playwrite CO","Great Vibes" ;
+    }
+
+  #post
+{
+    height:100%;
+    width:100%;
+    object-fit: contain;
+    border-radius: 5px;
+
+}
+.pic{
+    padding:10px;
+    background-color: white;
+}
+.nav a
+{
+    position:relative;
+    left:15px;
+}
+.nav a:hover #nav_logo
+{
+    color:rgb(83, 166, 255);
+    transition: 0.2s ease-in-out;
+}
+.actions {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:500px;
+}
+
+.actions i {
+    margin: 0 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display:block;
+}
+}
+@media all and (max-width:360px) {
+   .company
+   {
+    font-size: 20px;
+   } 
+}
