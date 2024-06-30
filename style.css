@@ -237,6 +237,21 @@ li a .fa-square-envelope
     top:0px;
     left:0;
 }
+.actions {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:500px;
+}
+
+.actions i {
+    margin: 0 60px;
+    font-size: 24px;
+    cursor: pointer;
+}
 @media all and (max-width:480px) {
     .posts
     {
